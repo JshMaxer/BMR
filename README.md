@@ -1,4 +1,6 @@
 # BEBU’S MOVIE RECOMMENDATION
+![8-anWV14FKHc9ht1p](https://github.com/JshMaxer/BMR/assets/78284063/f8dfaa7f-1fcc-4f32-b7a5-c6aed54c2b9b)
+
 
 ## Functional Requirements:
 
@@ -43,3 +45,8 @@
 
 - **Non-Functional:** The app should handle a minimum of 10,000 users concurrently without performance degradation.
 - **Example:** The server architecture should be scalable, allowing for increased user load without compromising app performance.
+
+
+## Concept of the BMR
+[BMR Concept](https://github.com/JshMaxer/BMR/files/12903063/BMR.Concept.pdf)
+
