@@ -1,5 +1,5 @@
 # BEBU’S MOVIE RECOMMENDATION
-![8-anWV14FKHc9ht1p](https://github.com/JshMaxer/BMR/assets/78284063/f8dfaa7f-1fcc-4f32-b7a5-c6aed54c2b9b)
+![8-anWV14FKHc9ht1p](https://github.com/JshMaxer/BMR/assets/78284063/b4a068a0-dd49-4a12-a717-903ecdc88b23)
 
 
 ## Functional Requirements:
