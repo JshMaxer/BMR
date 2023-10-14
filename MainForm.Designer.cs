@@ -85,13 +85,13 @@
             this.txtmovietitle.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtmovietitle.Font = new System.Drawing.Font("JetBrains Mono", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmovietitle.ForeColor = System.Drawing.Color.White;
-            this.txtmovietitle.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtmovietitle.Location = new System.Drawing.Point(328, 14);
             this.txtmovietitle.Multiline = true;
             this.txtmovietitle.Name = "txtmovietitle";
             this.txtmovietitle.ReadOnly = true;
+            this.txtmovietitle.ShortcutsEnabled = false;
             this.txtmovietitle.Size = new System.Drawing.Size(416, 63);
-            this.txtmovietitle.TabIndex = 0;
+            this.txtmovietitle.TabIndex = 1;
             this.txtmovietitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtoverview
@@ -102,13 +102,13 @@
             this.txtoverview.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtoverview.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtoverview.ForeColor = System.Drawing.Color.White;
-            this.txtoverview.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtoverview.Location = new System.Drawing.Point(328, 83);
             this.txtoverview.Multiline = true;
             this.txtoverview.Name = "txtoverview";
             this.txtoverview.ReadOnly = true;
+            this.txtoverview.ShortcutsEnabled = false;
             this.txtoverview.Size = new System.Drawing.Size(401, 334);
-            this.txtoverview.TabIndex = 0;
+            this.txtoverview.TabIndex = 2;
             this.txtoverview.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // guna2PictureBox1
