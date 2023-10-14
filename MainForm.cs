@@ -22,7 +22,7 @@ namespace MovieRecommendationApp
         private async void FetchAndDisplayMovieAsync()
         {
             string genre = GetGenreForCurrentMonth();
-            string url = $"{BaseUrl}/discover/movie?api_key={ApiKey}&with_genres={genre}&primary_release_date.gte={DateTime.Now:yyyy-MM-dd}&primary_release_date.lte={DateTime.Now:yyyy-MM-dd}";
+            string url = $"{BaseUrl}/discover/movie?api_key={ApiKey}&with_genres={genre}&sort_by=popularity.desc";
 
             using (HttpClient client = new HttpClient())
             {
@@ -33,28 +33,34 @@ namespace MovieRecommendationApp
                     string jsonString = await response.Content.ReadAsStringAsync();
                     dynamic data = JObject.Parse(jsonString);
 
-                    double movieRating = data.results[0].vote_average * 10; // TMDB returns ratings out of 10, so multiply by 10
-                    btnrating.Text = $"{movieRating}/10";
-
-                    string movieTitle = data.results[0].title;
-                    string movieOverview = data.results[0].overview;
-                    string posterPath = data.results[0].poster_path;
-
-                    txtmovietitle.Text = movieTitle.ToUpper();
-                    txtoverview.Text = movieOverview;
-
-                    // Display movie poster
-                    if (!string.IsNullOrEmpty(posterPath))
+                    if (data.results.Count > 0)
                     {
-                        string imageUrl = $"https://image.tmdb.org/t/p/w500{posterPath}";
-                        guna2PictureBox1.Load(imageUrl);
+                        double movieRating = data.results[0].vote_average; // TMDB returns ratings out of 10, so multiply by 10
+                        btnrating.Text = $"{movieRating}/10";
+
+                        string movieTitle = data.results[0].title;
+                        string movieOverview = data.results[0].overview;
+                        string posterPath = data.results[0].poster_path;
+
+                        txtmovietitle.Text = movieTitle.ToUpper();
+                        txtoverview.Text = movieOverview;
+
+                        // Display movie poster
+                        if (!string.IsNullOrEmpty(posterPath))
+                        {
+                            string imageUrl = $"https://image.tmdb.org/t/p/w500{posterPath}";
+                            guna2PictureBox1.Load(imageUrl);
+                        }
+                        else
+                        {
+                            // Handle case when no poster is available
+                            guna2PictureBox1.Image = null;
+                        }
                     }
                     else
                     {
-                        // Handle case when no poster is available
-                        guna2PictureBox1.Image = null;
+                        txtmovietitle.Text = "No trending movies found for this genre.";
                     }
-
                 }
                 else
                 {
@@ -62,6 +68,7 @@ namespace MovieRecommendationApp
                 }
             }
         }
+
 
         private void DisplayCurrentMonthGenre()
         {
