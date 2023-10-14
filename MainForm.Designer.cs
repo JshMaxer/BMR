@@ -85,12 +85,13 @@
             this.txtmovietitle.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtmovietitle.Font = new System.Drawing.Font("JetBrains Mono", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmovietitle.ForeColor = System.Drawing.Color.White;
+            this.txtmovietitle.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtmovietitle.Location = new System.Drawing.Point(328, 14);
             this.txtmovietitle.Multiline = true;
             this.txtmovietitle.Name = "txtmovietitle";
             this.txtmovietitle.ReadOnly = true;
             this.txtmovietitle.Size = new System.Drawing.Size(416, 63);
-            this.txtmovietitle.TabIndex = 15;
+            this.txtmovietitle.TabIndex = 0;
             this.txtmovietitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtoverview
@@ -101,12 +102,13 @@
             this.txtoverview.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtoverview.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtoverview.ForeColor = System.Drawing.Color.White;
+            this.txtoverview.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtoverview.Location = new System.Drawing.Point(328, 83);
             this.txtoverview.Multiline = true;
             this.txtoverview.Name = "txtoverview";
             this.txtoverview.ReadOnly = true;
             this.txtoverview.Size = new System.Drawing.Size(401, 334);
-            this.txtoverview.TabIndex = 14;
+            this.txtoverview.TabIndex = 0;
             this.txtoverview.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // guna2PictureBox1
@@ -132,7 +134,7 @@
             this.btnrating.Location = new System.Drawing.Point(548, 429);
             this.btnrating.Name = "btnrating";
             this.btnrating.Size = new System.Drawing.Size(182, 53);
-            this.btnrating.TabIndex = 10;
+            this.btnrating.TabIndex = 0;
             this.btnrating.Text = "10/10";
             this.btnrating.UseTransparentBackground = true;
             // 
@@ -147,7 +149,7 @@
             this.btngenre.Location = new System.Drawing.Point(344, 429);
             this.btngenre.Name = "btngenre";
             this.btngenre.Size = new System.Drawing.Size(182, 53);
-            this.btngenre.TabIndex = 11;
+            this.btngenre.TabIndex = 0;
             this.btngenre.Text = "SCI-FI";
             this.btngenre.UseTransparentBackground = true;
             // 
@@ -187,7 +189,7 @@
             this.eXITToolStripMenuItem1.Name = "eXITToolStripMenuItem1";
             this.eXITToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
             this.eXITToolStripMenuItem1.ShowShortcutKeys = false;
-            this.eXITToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.eXITToolStripMenuItem1.Size = new System.Drawing.Size(100, 22);
             this.eXITToolStripMenuItem1.Text = "EXIT";
             this.eXITToolStripMenuItem1.Click += new System.EventHandler(this.eXITToolStripMenuItem1_Click);
             // 
