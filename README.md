@@ -1,4 +1,4 @@
-# BEBU’S MOVIE RECOMMENDATION
+# BEBU’S MOVIE RECOMMENDATION APP
 ![8-anWV14FKHc9ht1p](https://github.com/JshMaxer/BMR/assets/78284063/b4a068a0-dd49-4a12-a717-903ecdc88b23)
 
 ## Overview
@@ -15,7 +15,7 @@ The Movie Recommendation App is a Windows Forms application built using C# that 
 
 ## Prerequisites
 
-- Before running the application, you need to obtain an API key from TMDb. Right click and click **TMBB API** and paste your actual TMDb API key for the app to fetch data successfully.
+- Before running the application, you need to obtain an [API](https://www.themoviedb.org/settings/api) key from TMDb. Right click and click **TMBB API** and paste your actual TMDb API key for the app to fetch data successfully.
 - To exit the application, Right click and click **BEBU's MOVIE RECOMMENDATION APP** then click **EXIT**.
 
 
@@ -49,12 +49,12 @@ private const string ApiKey = "YOUR_TMDB_API_KEY";
 
 **December (Month 12): Animation**
 
-## Dependencies
+### Dependencies
 Newtonsoft.Json: A popular JSON framework for .NET used to parse JSON data received from the TMDb API.
 
-## Credits
+### Credits
 TMDb API: The app utilizes the TMDb API to fetch movie data. Visit [TMDb website](https://www.themoviedb.org/documentation/api) for API documentation and usage guidelines.
 
-## Concept of the BMR
+### Concept of the BMR
 [BMR Concept](https://github.com/JshMaxer/BMR/files/12903063/BMR.Concept.pdf)
 
