@@ -1,6 +1,9 @@
 # BEBU’S MOVIE RECOMMENDATION APP
 ![8-anWV14FKHc9ht1p](https://github.com/JshMaxer/BMR/assets/78284063/b4a068a0-dd49-4a12-a717-903ecdc88b23)
 
+[Download](https://drive.google.com/file/d/1OyigxeT_D-Hu6izZpeZ6eGo0LClj0O7k/view?usp=sharing)
+[Visit Webpage](https://codedformm.blogspot.com/)
+
 ## Overview
 
 The Movie Recommendation App is a Windows Forms application built using C# that provides users with a daily movie recommendation based on the current day and month's genre. The application leverages the TMDb (The Movie Database) API to fetch movie data, including titles, overviews, ratings, and posters.
@@ -13,9 +16,12 @@ The Movie Recommendation App is a Windows Forms application built using C# that 
 
 - **User Interface:** The app offers a user-friendly interface with a movie title, overview, rating, genre, and poster display.
 
-## Prerequisites
+- **Error Handling:** The app handles cases where no popular movies are found for the day or if there's an error fetching data from the API.
 
-- Before running the application, you need to obtain an [API](https://www.themoviedb.org/settings/api) key from TMDb. Right click and click **TMBB API** and paste your actual TMDb API key for the app to fetch data successfully.
+## Usage
+Upon running the application, it will automatically fetch and display the movie recommendation for the current day. The movie's title, overview, genre, and average rating will be displayed on the interface. If there are no popular movies for the day or if there's an error fetching data, appropriate messages will be shown.
+
+## Prerequisites
 - To exit the application, Right click and click **BEBU's MOVIE RECOMMENDATION APP** then click **EXIT**.
 
 
@@ -49,11 +55,16 @@ private const string ApiKey = "YOUR_TMDB_API_KEY";
 
 **December (Month 12): Animation**
 
+
 ### Dependencies
 Newtonsoft.Json: A popular JSON framework for .NET used to parse JSON data received from the TMDb API.
 
 ### Credits
 TMDb API: The app utilizes the TMDb API to fetch movie data. Visit [TMDb website](https://www.themoviedb.org/documentation/api) for API documentation and usage guidelines.
+
+### License
+This project is licensed under the **MIT License**.
+
 
 ### Concept of the BMR
 [BMR Concept](https://github.com/JshMaxer/BMR/files/12903063/BMR.Concept.pdf)
