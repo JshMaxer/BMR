@@ -49,10 +49,10 @@ private const string ApiKey = "YOUR_TMDB_API_KEY";
 
 **December (Month 12): Animation**
 
-Dependencies
+## Dependencies
 Newtonsoft.Json: A popular JSON framework for .NET used to parse JSON data received from the TMDb API.
 
-Credits
+## Credits
 TMDb API: The app utilizes the TMDb API to fetch movie data. Visit [TMDb website](https://www.themoviedb.org/documentation/api) for API documentation and usage guidelines.
 
 ## Concept of the BMR
