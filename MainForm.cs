@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
-using System.Drawing;
 using System.Net.Http;
 using System.Windows.Forms;
 
@@ -8,20 +7,21 @@ namespace MovieRecommendationApp
 {
     public partial class MainForm : Form
     {
-        private const string ApiKey = "34d1a1bd431dc14e9243d534340f360b"; // Replace with your TMDb API key
+        private string ApiKey = "34d1a1bd431dc14e9243d534340f360b"; // Replace with your TMDb API key
+
         private const string BaseUrl = "https://api.themoviedb.org/3";
-        //Admin default API > 34d1a1bd431dc14e9243d534340f360b
 
         public MainForm()
         {
             InitializeComponent();
-            FetchAndDisplayMovieAsync();
-            DisplayCurrentMonthGenre();
+            FetchAndDisplayTopMoviesAsync();
         }
 
-        private async void FetchAndDisplayMovieAsync()
+        private async void FetchAndDisplayTopMoviesAsync()
         {
             string genre = GetGenreForCurrentMonth();
+            int currentDay = DateTime.Now.Day;
+
             string url = $"{BaseUrl}/discover/movie?api_key={ApiKey}&with_genres={genre}&sort_by=popularity.desc";
 
             using (HttpClient client = new HttpClient())
@@ -33,17 +33,24 @@ namespace MovieRecommendationApp
                     string jsonString = await response.Content.ReadAsStringAsync();
                     dynamic data = JObject.Parse(jsonString);
 
-                    if (data.results.Count > 0)
+                    if (data.results.Count >= currentDay)
                     {
-                        double movieRating = data.results[0].vote_average; // TMDB returns ratings out of 10, so multiply by 10
+                        double movieRating = data.results[currentDay - 1].vote_average; // TMDB returns ratings out of 10
                         btnrating.Text = $"{movieRating}/10";
 
-                        string movieTitle = data.results[0].title;
-                        string movieOverview = data.results[0].overview;
-                        string posterPath = data.results[0].poster_path;
+                        string movieTitle = data.results[currentDay - 1].title;
+                        string movieOverview = data.results[currentDay - 1].overview;
+                        string posterPath = data.results[currentDay - 1].poster_path;
 
                         txtmovietitle.Text = movieTitle.ToUpper();
                         txtoverview.Text = movieOverview;
+
+                        // Set genre text on the button
+                        btngenre.Text = GetGenreForCurrentMonthName();
+
+                        //Display Today's month genre
+                        string currentMonthName = DateTime.Now.ToString("MMMM");
+                        lblmonthgenre.Text = $"{DateTime.Now.Month.ToString(currentMonthName)} - {GetGenreForCurrentMonthName()}";
 
                         // Display movie poster
                         if (!string.IsNullOrEmpty(posterPath))
@@ -59,46 +66,13 @@ namespace MovieRecommendationApp
                     }
                     else
                     {
-                        txtmovietitle.Text = "No trending movies found for this genre.";
+                        txtmovietitle.Text = "No popular movies found for today.";
                     }
                 }
                 else
                 {
                     txtmovietitle.Text = "Error fetching data.";
                 }
-            }
-        }
-
-
-        private void DisplayCurrentMonthGenre()
-        {
-            string genre = GetGenreForCurrentMonthName();
-            btngenre.Text = genre;
-
-            DateTime dt = DateTime.Now;
-            string monthName = dt.ToString("MMMM");
-            lblmonthgenre.Text = $"{monthName} - {genre}".ToUpper();
-        }
-
-        private string GetGenreForCurrentMonthName()
-        {
-            int currentMonth = DateTime.Now.Month;
-
-            switch (currentMonth)
-            {
-                case 1: return "Adventure";
-                case 2: return "Romance";
-                case 3: return "Drama";
-                case 4: return "Comedy";
-                case 5: return "War";
-                case 6: return "Crime";
-                case 7: return "Fantasy";
-                case 8: return "History";
-                case 9: return "Action";
-                case 10: return "Sci-Fi";
-                case 11: return "Horror";
-                case 12: return "Animation";
-                default: return "Drama"; // Default to Drama for unknown months
             }
         }
 
@@ -124,16 +98,31 @@ namespace MovieRecommendationApp
             }
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private string GetGenreForCurrentMonthName()
         {
-            guna2Panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
+            int currentMonth = DateTime.Now.Month;
+
+            switch (currentMonth)
+            {
+                case 1: return "Adventure";
+                case 2: return "Romance";
+                case 3: return "Drama";
+                case 4: return "Comedy";
+                case 5: return "War";
+                case 6: return "Crime";
+                case 7: return "Fantasy";
+                case 8: return "History";
+                case 9: return "Action";
+                case 10: return "Sci-Fi";
+                case 11: return "Horror";
+                case 12: return "Animation";
+                default: return "Drama"; // Default to Drama for unknown months
+            }
         }
 
-        private void eXITToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void eXITToolStripMenuItem1_Click_1(object sender, EventArgs e)
         {
-            Environment.Exit(1);
+            Environment.Exit(0);
         }
     }
-
 }
-

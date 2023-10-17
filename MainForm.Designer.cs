@@ -85,7 +85,7 @@
             this.txtmovietitle.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtmovietitle.Font = new System.Drawing.Font("JetBrains Mono", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmovietitle.ForeColor = System.Drawing.Color.White;
-            this.txtmovietitle.Location = new System.Drawing.Point(328, 14);
+            this.txtmovietitle.Location = new System.Drawing.Point(328, 8);
             this.txtmovietitle.Multiline = true;
             this.txtmovietitle.Name = "txtmovietitle";
             this.txtmovietitle.ReadOnly = true;
@@ -102,12 +102,13 @@
             this.txtoverview.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtoverview.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtoverview.ForeColor = System.Drawing.Color.White;
-            this.txtoverview.Location = new System.Drawing.Point(328, 83);
+            this.txtoverview.Location = new System.Drawing.Point(328, 75);
             this.txtoverview.Multiline = true;
             this.txtoverview.Name = "txtoverview";
             this.txtoverview.ReadOnly = true;
+            this.txtoverview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtoverview.ShortcutsEnabled = false;
-            this.txtoverview.Size = new System.Drawing.Size(401, 334);
+            this.txtoverview.Size = new System.Drawing.Size(416, 342);
             this.txtoverview.TabIndex = 2;
             this.txtoverview.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -135,7 +136,7 @@
             this.btnrating.Name = "btnrating";
             this.btnrating.Size = new System.Drawing.Size(182, 53);
             this.btnrating.TabIndex = 0;
-            this.btnrating.Text = "10/10";
+            this.btnrating.Text = "RATING";
             this.btnrating.UseTransparentBackground = true;
             // 
             // btngenre
@@ -150,7 +151,7 @@
             this.btngenre.Name = "btngenre";
             this.btngenre.Size = new System.Drawing.Size(182, 53);
             this.btngenre.TabIndex = 0;
-            this.btngenre.Text = "SCI-FI";
+            this.btngenre.Text = "GENRE";
             this.btngenre.UseTransparentBackground = true;
             // 
             // formmenu
@@ -170,7 +171,7 @@
             this.formmenu.RenderStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.formmenu.RenderStyle.SeparatorColor = System.Drawing.Color.Empty;
             this.formmenu.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.formmenu.Size = new System.Drawing.Size(325, 26);
+            this.formmenu.Size = new System.Drawing.Size(325, 48);
             // 
             // bEBUsMOVIERECOMMENDATIONAPPToolStripMenuItem
             // 
@@ -189,9 +190,9 @@
             this.eXITToolStripMenuItem1.Name = "eXITToolStripMenuItem1";
             this.eXITToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
             this.eXITToolStripMenuItem1.ShowShortcutKeys = false;
-            this.eXITToolStripMenuItem1.Size = new System.Drawing.Size(100, 22);
+            this.eXITToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.eXITToolStripMenuItem1.Text = "EXIT";
-            this.eXITToolStripMenuItem1.Click += new System.EventHandler(this.eXITToolStripMenuItem1_Click);
+            this.eXITToolStripMenuItem1.Click += new System.EventHandler(this.eXITToolStripMenuItem1_Click_1);
             // 
             // MainForm
             // 
@@ -210,7 +211,6 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
