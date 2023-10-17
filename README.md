@@ -1,50 +1,27 @@
 # BEBU’S MOVIE RECOMMENDATION
 ![8-anWV14FKHc9ht1p](https://github.com/JshMaxer/BMR/assets/78284063/b4a068a0-dd49-4a12-a717-903ecdc88b23)
 
+# Movie Recommendation App
 
-## Functional Requirements:
+## Overview
 
-### Genre-Based Recommendations:
+The Movie Recommendation App is a Windows Forms application built using C# that provides users with a daily movie recommendation based on the current day and month's genre. The application leverages the TMDb (The Movie Database) API to fetch movie data, including titles, overviews, ratings, and posters.
 
-- **Functional:** The app recommends movies based on the genre of the current month.
-- **Example:** For October, the app recommends Sci-Fi movies; for November, it recommends Horror movies, and so on.
+## Features
 
-### Display Movie Details:
+- **Dynamic Movie Recommendation:** The app dynamically fetches the top-rated movie for the current day based on the genre associated with the current month.
 
-- **Functional:** Users can view detailed information about a recommended movie.
-- **Example:** Users can see the movie's title, overview, poster, and rating when they click on a movie recommendation.
+- **Genre Selection:** Each month is associated with a specific genre, ensuring that the recommended movie aligns with the month's theme.
 
-### Refresh Recommendations:
+- **User Interface:** The app offers a user-friendly interface with a movie title, overview, rating, genre, and poster display.
 
-- **Functional:** Users can manually refresh or change the recommended movie.
-- **Example:** There is a "Next" or "Refresh" button that, when clicked, fetches and displays a new movie based on the current month's genre.
+## Prerequisites
 
-## Non-Functional Requirements:
+Before running the application, you need to obtain an API key from TMDb. Right click and click **TMBB API** and paste your actual TMDb API key for the app to fetch data successfully.
 
-### Performance:
-
-- **Non-Functional:** The app should respond within 2 seconds when a user clicks to view movie details.
-- **Example:** When a user clicks on a movie, the app should load and display the movie details without significant delay.
-
-### Usability:
-
-- **Non-Functional:** The user interface should be intuitive and easy to navigate.
-- **Example:** Users should be able to understand how to refresh recommendations without any guidance.
-
-### Reliability:
-
-- **Non-Functional:** The app should be available 24/7 with a maximum downtime of 1 hour per month for maintenance.
-- **Example:** The app should be operational and accessible to users at all times, with scheduled maintenance communicated in advance.
-
-### Security:
-
-- **Non-Functional:** Data transmission between the app and server should be encrypted using HTTPS.
-- **Example:** Movie data fetched from the server should be transmitted securely to the app using HTTPS to prevent unauthorized access or tampering.
-
-### Scalability:
-
-- **Non-Functional:** The app should handle a minimum of 10,000 users concurrently without performance degradation.
-- **Example:** The server architecture should be scalable, allowing for increased user load without compromising app performance.
+```csharp
+private const string ApiKey = "YOUR_TMDB_API_KEY";
+```
 
 ## Month of the genre's
 
@@ -72,6 +49,11 @@
 
 **December (Month 12): Animation**
 
+Dependencies
+Newtonsoft.Json: A popular JSON framework for .NET used to parse JSON data received from the TMDb API.
+
+Credits
+TMDb API: The app utilizes the TMDb API to fetch movie data. Visit [TMDb website](https://www.themoviedb.org/documentation/api) for API documentation and usage guidelines.
 
 ## Concept of the BMR
 [BMR Concept](https://github.com/JshMaxer/BMR/files/12903063/BMR.Concept.pdf)
