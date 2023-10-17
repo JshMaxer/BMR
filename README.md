@@ -2,6 +2,7 @@
 ![8-anWV14FKHc9ht1p](https://github.com/JshMaxer/BMR/assets/78284063/b4a068a0-dd49-4a12-a717-903ecdc88b23)
 
 [Download](https://drive.google.com/file/d/1OyigxeT_D-Hu6izZpeZ6eGo0LClj0O7k/view?usp=sharing)
+
 [Visit Webpage](https://codedformm.blogspot.com/)
 
 ## Overview
@@ -23,11 +24,6 @@ Upon running the application, it will automatically fetch and display the movie 
 
 ## Prerequisites
 - To exit the application, Right click and click **BEBU's MOVIE RECOMMENDATION APP** then click **EXIT**.
-
-
-```csharp
-private const string ApiKey = "YOUR_TMDB_API_KEY";
-```
 
 ## Month of the genre's
 
@@ -55,7 +51,7 @@ private const string ApiKey = "YOUR_TMDB_API_KEY";
 
 **December (Month 12): Animation**
 
-
+##
 ### Dependencies
 Newtonsoft.Json: A popular JSON framework for .NET used to parse JSON data received from the TMDb API.
 
@@ -64,7 +60,7 @@ TMDb API: The app utilizes the TMDb API to fetch movie data. Visit [TMDb website
 
 ### License
 This project is licensed under the **MIT License**.
-
+##
 
 ### Concept of the BMR
 [BMR Concept](https://github.com/JshMaxer/BMR/files/12903063/BMR.Concept.pdf)
