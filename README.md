@@ -1,8 +1,6 @@
 # BEBU’S MOVIE RECOMMENDATION
 ![8-anWV14FKHc9ht1p](https://github.com/JshMaxer/BMR/assets/78284063/b4a068a0-dd49-4a12-a717-903ecdc88b23)
 
-# Movie Recommendation App
-
 ## Overview
 
 The Movie Recommendation App is a Windows Forms application built using C# that provides users with a daily movie recommendation based on the current day and month's genre. The application leverages the TMDb (The Movie Database) API to fetch movie data, including titles, overviews, ratings, and posters.
@@ -17,7 +15,9 @@ The Movie Recommendation App is a Windows Forms application built using C# that 
 
 ## Prerequisites
 
-Before running the application, you need to obtain an API key from TMDb. Right click and click **TMBB API** and paste your actual TMDb API key for the app to fetch data successfully.
+- Before running the application, you need to obtain an API key from TMDb. Right click and click **TMBB API** and paste your actual TMDb API key for the app to fetch data successfully.
+- To exit the application, Right click and click **BEBU's MOVIE RECOMMENDATION APP** then click **EXIT**.
+
 
 ```csharp
 private const string ApiKey = "YOUR_TMDB_API_KEY";
