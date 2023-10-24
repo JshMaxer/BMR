@@ -48,6 +48,10 @@ namespace MovieRecommendationApp
                         // Set genre text on the button
                         btngenre.Text = GetGenreForCurrentMonthName();
 
+                        // Set month and genre to lblmonthgenre
+                        DateTime dt = DateTime.Now;
+                        lblmonthgenre.Text = $"{dt.ToString("MMMM")} - {GetGenreForCurrentMonthName()}";
+
                         // Display movie poster
                         if (!string.IsNullOrEmpty(posterPath))
                         {
