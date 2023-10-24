@@ -8,7 +8,6 @@ namespace MovieRecommendationApp
     public partial class MainForm : Form
     {
         private string ApiKey = "34d1a1bd431dc14e9243d534340f360b"; // Replace with your TMDb API key
-
         private const string BaseUrl = "https://api.themoviedb.org/3";
 
         public MainForm()
@@ -20,7 +19,6 @@ namespace MovieRecommendationApp
         private async void FetchAndDisplayTopMoviesAsync()
         {
             string genre = GetGenreForCurrentMonth();
-            int currentDay = DateTime.Now.Day;
 
             string url = $"{BaseUrl}/discover/movie?api_key={ApiKey}&with_genres={genre}&sort_by=popularity.desc";
 
@@ -33,24 +31,22 @@ namespace MovieRecommendationApp
                     string jsonString = await response.Content.ReadAsStringAsync();
                     dynamic data = JObject.Parse(jsonString);
 
-                    if (data.results.Count >= currentDay)
+                    if (data.results.Count > 0)
                     {
-                        double movieRating = data.results[currentDay - 1].vote_average; // TMDB returns ratings out of 10
+                        Random random = new Random();
+                        int randomIndex = random.Next(0, data.results.Count);
+                        double movieRating = data.results[randomIndex].vote_average;
                         btnrating.Text = $"{movieRating}/10";
 
-                        string movieTitle = data.results[currentDay - 1].title;
-                        string movieOverview = data.results[currentDay - 1].overview;
-                        string posterPath = data.results[currentDay - 1].poster_path;
+                        string movieTitle = data.results[randomIndex].title;
+                        string movieOverview = data.results[randomIndex].overview;
+                        string posterPath = data.results[randomIndex].poster_path;
 
                         txtmovietitle.Text = movieTitle.ToUpper();
                         txtoverview.Text = movieOverview;
 
                         // Set genre text on the button
                         btngenre.Text = GetGenreForCurrentMonthName();
-
-                        //Display Today's month genre
-                        string currentMonthName = DateTime.Now.ToString("MMMM");
-                        lblmonthgenre.Text = $"{DateTime.Now.Month.ToString(currentMonthName)} - {GetGenreForCurrentMonthName()}";
 
                         // Display movie poster
                         if (!string.IsNullOrEmpty(posterPath))
@@ -66,7 +62,7 @@ namespace MovieRecommendationApp
                     }
                     else
                     {
-                        txtmovietitle.Text = "No popular movies found for today.";
+                        txtmovietitle.Text = "No movies found for the selected genre this month.";
                     }
                 }
                 else
@@ -120,7 +116,12 @@ namespace MovieRecommendationApp
             }
         }
 
-        private void eXITToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            FetchAndDisplayTopMoviesAsync();
+        }
+
+        private void btnexit_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }

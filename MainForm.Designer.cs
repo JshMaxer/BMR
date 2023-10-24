@@ -38,12 +38,10 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnrating = new Guna.UI2.WinForms.Guna2Button();
             this.btngenre = new Guna.UI2.WinForms.Guna2Button();
-            this.formmenu = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
-            this.bEBUsMOVIERECOMMENDATIONAPPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eXITToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnexit = new Guna.UI2.WinForms.Guna2Button();
+            this.btnnext = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            this.formmenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -106,7 +104,6 @@
             this.txtoverview.Multiline = true;
             this.txtoverview.Name = "txtoverview";
             this.txtoverview.ReadOnly = true;
-            this.txtoverview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtoverview.ShortcutsEnabled = false;
             this.txtoverview.Size = new System.Drawing.Size(416, 342);
             this.txtoverview.TabIndex = 2;
@@ -154,45 +151,41 @@
             this.btngenre.Text = "GENRE";
             this.btngenre.UseTransparentBackground = true;
             // 
-            // formmenu
+            // btnexit
             // 
-            this.formmenu.BackColor = System.Drawing.Color.White;
-            this.formmenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.formmenu.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold);
-            this.formmenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bEBUsMOVIERECOMMENDATIONAPPToolStripMenuItem});
-            this.formmenu.Name = "formmenu";
-            this.formmenu.RenderStyle.ArrowColor = System.Drawing.Color.Empty;
-            this.formmenu.RenderStyle.BorderColor = System.Drawing.Color.Black;
-            this.formmenu.RenderStyle.ColorTable = null;
-            this.formmenu.RenderStyle.RoundedEdges = true;
-            this.formmenu.RenderStyle.SelectionArrowColor = System.Drawing.Color.Empty;
-            this.formmenu.RenderStyle.SelectionBackColor = System.Drawing.Color.White;
-            this.formmenu.RenderStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.formmenu.RenderStyle.SeparatorColor = System.Drawing.Color.Empty;
-            this.formmenu.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.formmenu.Size = new System.Drawing.Size(325, 48);
+            this.btnexit.Animated = true;
+            this.btnexit.BackColor = System.Drawing.Color.Transparent;
+            this.btnexit.BorderColor = System.Drawing.Color.White;
+            this.btnexit.BorderRadius = 5;
+            this.btnexit.BorderThickness = 1;
+            this.btnexit.FillColor = System.Drawing.Color.Transparent;
+            this.btnexit.Font = new System.Drawing.Font("JetBrains Mono", 11.25F);
+            this.btnexit.ForeColor = System.Drawing.Color.White;
+            this.btnexit.Location = new System.Drawing.Point(5, 541);
+            this.btnexit.Name = "btnexit";
+            this.btnexit.Size = new System.Drawing.Size(94, 35);
+            this.btnexit.TabIndex = 13;
+            this.btnexit.Text = "EXIT";
+            this.btnexit.UseTransparentBackground = true;
+            this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
             // 
-            // bEBUsMOVIERECOMMENDATIONAPPToolStripMenuItem
+            // btnnext
             // 
-            this.bEBUsMOVIERECOMMENDATIONAPPToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.eXITToolStripMenuItem1});
-            this.bEBUsMOVIERECOMMENDATIONAPPToolStripMenuItem.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bEBUsMOVIERECOMMENDATIONAPPToolStripMenuItem.Image = global::MovieRecommendationApp.Properties.Resources.output_onlinepngtools;
-            this.bEBUsMOVIERECOMMENDATIONAPPToolStripMenuItem.Name = "bEBUsMOVIERECOMMENDATIONAPPToolStripMenuItem";
-            this.bEBUsMOVIERECOMMENDATIONAPPToolStripMenuItem.Size = new System.Drawing.Size(324, 22);
-            this.bEBUsMOVIERECOMMENDATIONAPPToolStripMenuItem.Text = "BEBU\'s MOVIE RECOMMENDATION APP";
-            // 
-            // eXITToolStripMenuItem1
-            // 
-            this.eXITToolStripMenuItem1.BackColor = System.Drawing.Color.White;
-            this.eXITToolStripMenuItem1.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eXITToolStripMenuItem1.Name = "eXITToolStripMenuItem1";
-            this.eXITToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
-            this.eXITToolStripMenuItem1.ShowShortcutKeys = false;
-            this.eXITToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.eXITToolStripMenuItem1.Text = "EXIT";
-            this.eXITToolStripMenuItem1.Click += new System.EventHandler(this.eXITToolStripMenuItem1_Click_1);
+            this.btnnext.Animated = true;
+            this.btnnext.BackColor = System.Drawing.Color.Transparent;
+            this.btnnext.BorderColor = System.Drawing.Color.White;
+            this.btnnext.BorderRadius = 5;
+            this.btnnext.BorderThickness = 1;
+            this.btnnext.FillColor = System.Drawing.Color.Transparent;
+            this.btnnext.Font = new System.Drawing.Font("JetBrains Mono", 11.25F);
+            this.btnnext.ForeColor = System.Drawing.Color.White;
+            this.btnnext.Location = new System.Drawing.Point(938, 541);
+            this.btnnext.Name = "btnnext";
+            this.btnnext.Size = new System.Drawing.Size(129, 35);
+            this.btnnext.TabIndex = 13;
+            this.btnnext.Text = "Next Movie";
+            this.btnnext.UseTransparentBackground = true;
+            this.btnnext.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // MainForm
             // 
@@ -202,7 +195,8 @@
             this.BackgroundImage = global::MovieRecommendationApp.Properties.Resources.wallpaperflare_com_wallpaper__1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1072, 582);
-            this.ContextMenuStrip = this.formmenu;
+            this.Controls.Add(this.btnnext);
+            this.Controls.Add(this.btnexit);
             this.Controls.Add(this.lblmonthgenre);
             this.Controls.Add(this.guna2Panel1);
             this.ForeColor = System.Drawing.Color.White;
@@ -214,7 +208,6 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            this.formmenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,10 +221,9 @@
         private Guna.UI2.WinForms.Guna2Button btnrating;
         private Guna.UI2.WinForms.Guna2Button btngenre;
         private ZBobb.AlphaBlendTextBox txtoverview;
-        private Guna.UI2.WinForms.Guna2ContextMenuStrip formmenu;
         private ZBobb.AlphaBlendTextBox txtmovietitle;
-        private System.Windows.Forms.ToolStripMenuItem bEBUsMOVIERECOMMENDATIONAPPToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eXITToolStripMenuItem1;
+        private Guna.UI2.WinForms.Guna2Button btnexit;
+        private Guna.UI2.WinForms.Guna2Button btnnext;
     }
 }
 
