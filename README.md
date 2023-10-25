@@ -1,7 +1,7 @@
 # BEBU’S MOVIE RECOMMENDATION APP
 ![8-anWV14FKHc9ht1p](https://github.com/JshMaxer/BMR/assets/78284063/b4a068a0-dd49-4a12-a717-903ecdc88b23)
 
-[Download](https://drive.google.com/file/d/1OyigxeT_D-Hu6izZpeZ6eGo0LClj0O7k/view?usp=sharing)
+[Download](https://drive.google.com/uc?id=1NGh_dyy1EgINOEu9aXDyjuzhH7VwtkEZ)
 
 [Visit Webpage](https://codedformm.blogspot.com/)
 
