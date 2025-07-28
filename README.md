@@ -1,8 +1,6 @@
 # BEBU’S MOVIE RECOMMENDATION APP
 ![8-anWV14FKHc9ht1p](https://github.com/JshMaxer/BMR/assets/78284063/b4a068a0-dd49-4a12-a717-903ecdc88b23)
 
-[Download](https://github.com/JshMaxer/BMR/blob/master/BMR%20Setup%20File.exe)
-
 [Visit New  and Updated Web Version](https://github.com/JshMaxer/BEBU_MOVIES_RECOMMENDATION)
 
 ## Overview
