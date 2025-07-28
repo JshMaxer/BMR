@@ -20,34 +20,31 @@ The Movie Recommendation App is a Windows Forms application built using C# that 
 ## Usage
 Upon running the application, it will automatically fetch and display the movie recommendation for the current day. The movie's title, overview, genre, and average rating will be displayed on the interface. If there are no popular movies for the day or if there's an error fetching data, appropriate messages will be shown.
 
-## Prerequisites
-- To exit the application, Right click and click **BEBU's MOVIE RECOMMENDATION APP** then click **EXIT**.
-
 ## Month of the genre's
 
-**January (Month 1): Adventure**
+**January: Adventure**
 
-**February (Month 2): Romance**
+**February: Romance**
 
-**March (Month 3): Drama**
+**March: Drama**
 
-**April (Month 4): Comedy**
+**April: Comedy**
 
-**May (Month 5): War**
+**May: War**
 
-**June (Month 6): Crime**
+**June: Crime**
 
-**July (Month 7): Fantasy**
+**July: Fantasy**
 
-**August (Month 8): History**
+**August: History**
 
-**September (Month 9): Action**
+**September: Action**
 
-**October (Month 10): Sci-Fi**
+**October: Sci-Fi**
 
-**November (Month 11): Horror**
+**November: Horror**
 
-**December (Month 12): Animation**
+**December: Animation**
 
 ##
 ### Dependencies
